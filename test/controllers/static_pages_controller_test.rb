@@ -5,8 +5,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     puts "homge page url -> #{static_pages_home_url}"
     get static_pages_home_url
     assert_response :success
-    assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
+
 
   test "should get help" do
     get static_pages_help_url

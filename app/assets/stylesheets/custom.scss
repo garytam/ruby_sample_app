@@ -1,6 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+$light-grey: #777;
+$yellow: #FFFF99;
+$gray-medium-light: #eaeaea;
+$green: #00FF00;
+
+
 /* universal */
 
 body {
@@ -17,11 +24,11 @@ textarea {
 
 .center {
   text-align: center;
+  h1{
+    margin-bottom: 10px;
+  }
 }
 
-.center h1 {
-  margin-bottom: 10px;
-}
 
 /* typography */
 
@@ -42,7 +49,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: $light-grey;
 }
 
 p {
@@ -61,9 +68,13 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
+  &:hover {
+    color: $yellow;
+    text-decoration: none;
+  }
 
-#logo:hover {
+}
+#logo111:hover {
   color: #FFFF99;
   text-decoration: none;
 }
@@ -73,28 +84,47 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+  border-top: 1px solid $gray-medium-light;
+  color: $light-grey;
+  a {
+    color: #555;
+    &:hover {    /* we need the anchor to be hover */
+      color: $green;
+    }
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  small {
+    float: left;
+  }
 }
 
-footer a {
+footer111 a {
   color: #555;
 }
 
-footer a:hover {
+footer111 a:hover {
   color: #00FF00;
 }
 
-footer small {
+footer111 small {
   float: left;
 }
 
-footer ul {
+footer111 ul {
   float: right;
   list-style: none;
 }
 
-footer ul li {
+footer111 ul li {
   float: left;
   margin-left: 15px;
 }

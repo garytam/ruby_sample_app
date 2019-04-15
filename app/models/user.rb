@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
-  attr_accessor :password_digest, :password_confirmation
+  has_secure_password
+
 
   before_create :set_password_update_date
 
@@ -15,7 +16,6 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX},
                     uniqueness: { case_sensitive: false}
 
-  has_secure_password
 
   validates :password_digest, presence: true, length: { minimum: 6}
 

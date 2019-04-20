@@ -7,3 +7,9 @@ one:
 two:
   name: MyString
   email: MyString2
+
+
+joebo:
+  name: Joe Bo
+  email: gardo@gardo.com
+  password_digest: <%= digest of the some sort %>

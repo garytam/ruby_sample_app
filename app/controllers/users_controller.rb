@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = 'Welcome to my nightmare'
       # redirect_to user_url(@user) this works but the below is simpler
       redirect_to @user

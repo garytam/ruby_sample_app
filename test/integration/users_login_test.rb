@@ -2,9 +2,7 @@ require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
 
-  def setup
-    @user =  user(:joebo)
-  end
+
 
   test 'login invalid info' do
     get login_path
